@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <script src="{%  static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{%  static 'css/style.css' %}">
+
+</head>
+<body>
+<div class="container-fluid" style="background-color: white;height:738px;margin: 0px;PADDING: 40px 50px 30px 180px">
+<table border="0px" width="100%" cellpadding="100">
+<td><form method="POST"  novalidate>
+    {% csrf_token %}
+    <table>
+    {% for fm in form  %}
+        <tr>
+            <td><b>{{fm.label_tag}}</b></td>
+            <td>{{fm}}</td>
+            <td>{{fm.errors}}</td>
+        </tr>
+    <br>
+    {% endfor %}
+    </table>
+    <input type="submit" value="Signup">
+   </form>
+    </td>
+    <td> <img src="{% static 'images/ladyimg1.jpg' height='20px' width='20px' %}"></td>
+ </table>
+
+</body>
+</html>

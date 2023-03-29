@@ -1,0 +1,17 @@
+h3
+{
+color:blue;
+}
+h1
+{
+color:darkpink;
+}
+#div1{
+        background-color:white;
+        height:660px;
+        width:1469px;
+        margin: 0px;
+        PADDING: 20px 20px 20px 20px;
+        '''outline:2px solid skyblue;'''
+}
+/* Add a black background color to the top navigation */

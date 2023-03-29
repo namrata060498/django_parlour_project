@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+{% block body %}
+<div class="container-fluid" style="background-color: white;height:538px;margin: 0px;PADDING: 40px 50px 30px 180px">
+  <div style="height: 500px,width: 800px,
+            overflow: hidden,
+            overflow: scroll,
+            overflow: auto">
+<table border="1px" cellspacing="2px">
+    {% for fm in feedback %}
+    <tr>
+        <th>Client Name</th>
+        <th>Feedback</th>
+        <th>Client_Age</th>
+        <th>Email</th>
+        <th>Contact_no</th>
+    </tr>
+    <tr>
+        <td>{{fm.clientname}}</td>
+        <td>{{fm.clientfeedback}}</td>
+        <td>{{fm.clientage}}</td>
+        <td>{{fm.email}}</td>
+        <td>{{fm.contactno}}</td>
+    </tr>
+    {% endfor %}
+</table>
+    </div>
+</div>
+{% endblock %}

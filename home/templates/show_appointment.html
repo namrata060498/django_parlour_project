@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block body %}
+<div class="container-fluid" style="background-color: white;height:538px;margin: 0px;PADDING: 40px 50px 30px 180px">
+<table border="1px" cellspacing="2px" cellpadding="10px">
+    {% for fm in client %}
+    <tr>
+        <th>Client Name</th>
+        <th>Email</th>
+        <th>Contact_Number</th>
+        <th>Appointment_Date</th>
+        <th>Appointment_Time</th>
+    </tr>
+    <tr>
+        <td>{{fm.Client_Name}}</td>
+        <td>{{fm.Email}}</td>
+        <td>{{fm.Contact_Number}}</td>
+        <td>{{fm.Appointment_Date}}</td>
+        <td>{{fm.Appointment_Time}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

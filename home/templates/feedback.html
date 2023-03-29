@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block body %}
+{% if error %}
+{% endif %}
+<div class="container-fluid" style="align:right;background-color: white;height:538px;margin: 0px;PADDING:0px">
+       <table align="center" cellpadding="50" cellspacing="20">
+        <td>
+
+<h2>Enter Your Feedback:</h2>
+<form method="POST" novalidate>
+    {% csrf_token %}
+    <table>
+        {% for fm in form %}
+        <tr>
+            <td><b>{{fm.label_tag}}</b></td>
+            <td>{{fm}}</td>
+            <td>{{fm.errors}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <link src="home.html"><input type="submit"></link>
+</form>
+            </td>
+    <td> <img src="{% static 'images/feedback.png' height='20px' width='20px' %}"></td>
+        </table>
+</div>
+{% endblock %}

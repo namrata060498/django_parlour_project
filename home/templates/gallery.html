@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+{% load static %}
+    <script src="{%  static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{%  static 'css/style.css' %}">
+
+
+
+{% block body %}
+<div class="container-fluid" style="background-color: white;height:538px;margin: 0px;PADDING:30px">
+    <table class="container-fluid" align="center" cellspacing="2" cellpadding="5">
+            <tr><td><img src="{% static 'images/facial.jpg' %}" width="350px" height="230px"></td>
+        <td><img src="{% static 'images/g2.jpg' %}" width="350px" height="230px"></td>
+        <td><img src="{% static 'images/facial2.jpg' %}" width="350px" height="230px"></td>
+        <td><img src="{% static 'images/hair1.jpg' %}" width="350px" height="230px"></td></tr>
+        <tr><td><img src="{% static 'images/hair.png' %}" width="350px" height="230px"></td>
+
+            <td><img src="{% static 'images/wax2.jpg' %}" width="350px" height="230px"></td>
+        <td><img src="{% static 'images/hair6.jpg' %}" width="350px" height="230px"></td>
+        <td><img src="{% static 'images/wax.jpg' %}" width="350px" height="230px"></td></tr>
+
+
+
+
+
+        </table>
+</div>
+{% endblock %}
